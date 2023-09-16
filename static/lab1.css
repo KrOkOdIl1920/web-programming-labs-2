@@ -1,0 +1,12 @@
+body {
+    background-color: lightblue;
+    color: brown;
+    font-family: Arial;
+    margin: 0px;
+    text-align: center;
+}
+
+.oak {
+    right: 500px;
+    vertical-align: top;
+}

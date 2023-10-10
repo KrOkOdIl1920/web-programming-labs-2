@@ -173,4 +173,5 @@ def jinja():
 
 @app.route("/lab2/example")
 def example():
-    return render_template("example.html")
+    name = "Артём Донельчук"
+    return render_template("example.html", name=name)

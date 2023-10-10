@@ -173,8 +173,12 @@ def jinja():
 
 @app.route("/lab2/example")
 def example():
-    name = "Артём Донельчук"
-    get_lab_num = "2"
-    get_cou_num = "3"
-    get_gro_num = "ФБИ-13"
-    return render_template("example.html", get_lab_num=get_lab_num)
+    name, get_lab_num, get_cou_num, get_gro_num = "Артём Донельчук", 2, 3, "ФБИ-13"
+    fruits = [
+        {"name": "яблоки", "price": 100},
+        {"name": "груши", "price": 120},
+        {"name": "апельсины", "price": 80},
+        {"name": "мандарины", "price": 95},
+        {"name": "манго", "price": 321}
+    ]
+    return render_template("example.html",get_lab_num=get_lab_num, fruits=fruits)

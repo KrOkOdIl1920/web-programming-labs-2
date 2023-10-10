@@ -177,5 +177,4 @@ def example():
     get_lab_num = "2"
     get_cou_num = "3"
     get_gro_num = "ФБИ-13"
-    return render_template("example.html", name=name, get_lab_num=get_lab_num, get_cou_num=get_cou_num, 
-                           get_gro_num=get_gro_num)
+    return render_template("example.html", get_lab_num=get_lab_num)

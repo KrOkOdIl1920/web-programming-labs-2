@@ -198,3 +198,7 @@ def example():
 @app.route("/lab2")
 def lab2():
     return render_template("lab2.html")
+
+@app.route("/lab2/rose")
+def rose():
+    return render_template("rose.html")

@@ -194,3 +194,7 @@ def example():
         {"author": "Максим Горький", "book_name": "Старуха Изергиль", "genre": "рассказ", "pages": "4"}
     ]
     return render_template("example.html",get_lab_num=get_lab_num, fruits=fruits, books=books)
+
+@app.route("/lab2")
+def lab2():
+    return render_template("lab2.html")

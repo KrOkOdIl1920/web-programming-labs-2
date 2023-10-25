@@ -11,7 +11,7 @@
     <div>ФИО:</div>
 
     <div>
-        <input type="text" placeholder="Введите ФИО" name="user_fio", value="{{ user_fio or '' }}", required>
+        <input type="text" placeholder="Введите ФИО" name="user_fio", value="{{ user_fio or '' }}">
         <span class="error">{{ errors.user_fio }}</span>
     </div>
 
@@ -51,21 +51,21 @@
     <div>Ваш возраст:</div>
 
     <div>
-        <input type="number" name="age_pass", value="{{ age_pass or '' }}", required>
+        <input type="number" name="age_pass", value="{{ age_pass or '' }}">
         <span class="error">{{ errors.age_pass }}</span>
     </div>
 
     <div>Пункт выезда:</div>
 
     <div>
-        <input type="text" placeholder="Введите пункт выезда" name="user_out", value="{{ user_out or '' }}", required>
+        <input type="text" placeholder="Введите пункт выезда" name="user_out", value="{{ user_out or '' }}">
         <span class="error">{{ errors.user_out }}</span>
     </div>
 
     <div>Пункт назначения:</div>
 
     <div>
-        <input type="text" placeholder="Введите пунт назначения" name="user_in", value="{{ user_in or '' }}", required>
+        <input type="text" placeholder="Введите пунт назначения" name="user_in", value="{{ user_in or '' }}">
         <span class="error">{{ errors.user_in }}</span>
     </div>
 

@@ -67,6 +67,8 @@ a {
     text-decoration: none;
     text-shadow: 10px 6px 2px gray;
     transition: 600ms 800ms;
+    display: -webkit-box;
+    text-align: -webkit-center;
 }
 
 a:visited {

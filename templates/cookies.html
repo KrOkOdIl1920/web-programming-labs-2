@@ -5,10 +5,21 @@
 {% block main %}
 
     <h1>Cookies</h1>
+
+    <h3 style="color: blue; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">{{ error }}</h3>
+
     <form method="post">
         <div>
             <label for="color">Выберите цвет</label>
             <input type="color" id="color" name="color">
+        </div>
+        <div>
+            <label for="color_fon">Выберите цвет фона</label>
+            <input type="color" id="color_fon" name="color_fon">
+        </div>
+        <div>
+            <label for="text_size">Выберите размер шрифта от 5 до 30</label>
+            <input type="number" id="text_size" name="text_size">
         </div>
         <div>
             <button type="submit">Ок</button>

@@ -10,7 +10,6 @@ def lab():
 @lab4.route("/lab4/login/", methods=["POST", "GET"])
 def login():
     if request.method == "GET":
-        print(request.method)
         return render_template("login.html")
 
     username = request.form.get("username")
@@ -126,10 +125,30 @@ def offer():
 def cookies():
     if request.method == "GET":
         return render_template("cookies.html")
+    
+    if request.method == "POST":
+        color = request.form.get("color")
+        color_fon = request.form.get("color_fon")
+        text_size = request.form.get("text_size")
+        headers = {
+            "Set-Cookie" : [
+                "color=" + color + "; path=/",
+                "background-color=" + color_fon + "; path=/",
+                "font-size=" + text_size + "px" + "; path=/"
+            ],
+            "Location" : "/lab4/cookies"
+        }
 
-    color = request.form.get("color")
-    headers = {
-        "Set-Cookie" : "color=" + color + "; path=/",
-        "Location" : "/lab4/cookies"
-    }
-    return "", 303, headers
+        if color == color_fon:
+            error = "Ошибка! Цвет текста и фона не могут совпадать!"
+            return render_template("cookies.html", error = error)
+
+        if text_size is None or text_size == "":
+            error = "Ошибка! Введите размер шрифта!"
+            return render_template("cookies.html", error = error)
+            
+        if int(text_size) >= 30 and int(text_size) <= 5:
+            error = "Ошибка! Введите размер шрифта от 5 до 30!"
+            return render_template("cookies.html", error = error)
+
+        return "", 303, headers

@@ -98,7 +98,7 @@ def offer():
         else:
             type_offer = "овес"
 
-        return render_template("offer_conf%.html", total_price = total_price, type_offer = type_offer)
+        return render_template("offer_conf%.html", total_price = total_price, type_offer = type_offer, weight = weight)
     else:
         weight = int(weight)
         prices = {
@@ -122,4 +122,14 @@ def offer():
         return render_template("offer_conf.html", total_price = total_price, weight = weight, type_offer = type_offer)
 
 
-    return render_template("offer.html")
+@lab4.route("/lab4/cookies/", methods=["POST", "GET"])
+def cookies():
+    if request.method == "GET":
+        return render_template("cookies.html")
+
+    color = request.form.get("color")
+    headers = {
+        "Set-Cookie" : "color=" + color + "; path=/",
+        "Location" : "/lab4/cookies"
+    }
+    return "", 303, headers

@@ -146,8 +146,8 @@ def cookies():
         if text_size is None or text_size == "":
             error = "Ошибка! Введите размер шрифта!"
             return render_template("cookies.html", error = error)
-            
-        if int(text_size) >= 30 and int(text_size) <= 5:
+
+        if int(text_size) > 30 or int(text_size) < 5:
             error = "Ошибка! Введите размер шрифта от 5 до 30!"
             return render_template("cookies.html", error = error)
 

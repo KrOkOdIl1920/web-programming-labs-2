@@ -3,7 +3,9 @@
 {% block lab %}Лабораторная работа 5{% endblock %}
 
 {% block main %}
-    <h1>Flask & DB</h1>
-    <div>Тема лабораторной - Flask & DB. Список сделанных страниц:</div>
-    <div> {{ result }}</div>
+    <h1>Имена пользователей</h1>
+    <ul>
+        {% for user in users %}
+        <li>{{ user }}</li>
+        {% endfor %}
 {% endblock %}

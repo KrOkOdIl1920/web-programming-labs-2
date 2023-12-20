@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, abort
+from flask import Blueprint, render_template, abort, request
 
 lab8 = Blueprint('lab8', __name__)
 
@@ -25,4 +25,24 @@ def get_course(course_num):
         abort(404)
     else:
         course_num = course_num - 1
+        return courses[course_num]
+    
+
+@lab8.route('/lab8/api/courses/<int:course_num>', methods=["DELETE"])
+def del_course(course_num):
+    if course_num > len(courses) or course_num <= 0:
+        abort(404)
+    else:
+        course_num = course_num - 1
+        del courses[course_num]
+        return '', 204
+
+
+@lab8.route('/lab8/api/courses/<int:course_num>', methods=["PUT"])
+def put_course(course_num):
+    if course_num > len(courses) or course_num <= 0:
+        abort(404)
+    else:
+        course = request.get_json()
+        courses[course_num] = course
         return courses[course_num]

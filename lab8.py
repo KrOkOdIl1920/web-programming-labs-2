@@ -21,26 +21,24 @@ def get_courses():
 
 @lab8.route('/lab8/api/courses/<int:course_num>', methods=["GET"])
 def get_course(course_num):
-    if course_num > len(courses) or course_num <= 0:
+    if course_num > (len(courses) - 1) or course_num < 0:
         abort(404)
     else:
-        course_num = course_num - 1
         return courses[course_num]
     
 
-@lab8.route('/lab8/api/courses/<int:course_num>', methods=["DELETE"])
+@lab8.route('/lab8/api/courses/<int:course_num>', methods=['DELETE'])
 def del_course(course_num):
-    if course_num > len(courses) or course_num <= 0:
+    if course_num > (len(courses) - 1) or course_num < 0:
         abort(404)
     else:
-        course_num = course_num - 1
         del courses[course_num]
         return '', 204
 
 
 @lab8.route('/lab8/api/courses/<int:course_num>', methods=["PUT"])
 def put_course(course_num):
-    if course_num > len(courses) or course_num <= 0:
+    if course_num > (len(courses) - 1) or course_num < 0:
         abort(404)
     else:
         course = request.get_json()

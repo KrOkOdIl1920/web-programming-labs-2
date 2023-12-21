@@ -23,6 +23,9 @@ function fiilCourseList() {
 
             let delButton = document.createElement("button");
             delButton.innerText = "Удалить";
+            delButton.onclick = function() {
+                deleteCourse(i);
+            };
 
             let tdActions = document.createElement("td");
             tdActions.append(editButton);
@@ -36,4 +39,14 @@ function fiilCourseList() {
             tbody.append(tr);
         }
     })
+}
+
+function deleteCourse(num) {
+    if(! confirm("Вы точно хотите удалить курс?"))
+        return;
+
+    fetch(`/lab8/api/courses/${num}`, {method: 'DELETE'})
+    .then(function() {
+        fiilCourseList();
+    });
 }

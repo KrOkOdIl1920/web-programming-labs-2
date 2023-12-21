@@ -18,6 +18,9 @@ function fiilCourseList() {
             let tdPrice = document.createElement("td");
             tdPrice.innerText = courses[i].price || "бесплатно";
 
+            let tdDate = document.createElement("td");
+            tdDate.innerText = courses[i].date || "";
+
             let editButton = document.createElement("button");
             editButton.innerText = "Редактировать";
             editButton.onclick = function() {
@@ -37,6 +40,7 @@ function fiilCourseList() {
             tr.append(tdName);
             tr.append(tdVideos);
             tr.append(tdPrice);
+            tr.append(tdDate);
             tr.append(tdActions);
 
             tbody.append(tr);

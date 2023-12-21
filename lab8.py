@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, abort, request
+from flask import Blueprint, render_template, abort, request, jsonify
 
 lab8 = Blueprint('lab8', __name__)
 
@@ -24,7 +24,7 @@ def get_course(course_num):
     if course_num > (len(courses) - 1) or course_num < 0:
         abort(404)
     else:
-        return courses[course_num]
+        return jsonify[course_num]
     
 
 @lab8.route('/lab8/api/courses/<int:course_num>', methods=['DELETE'])

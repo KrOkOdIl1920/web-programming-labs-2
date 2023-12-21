@@ -1,0 +1,109 @@
+body {
+    background-image: url("https://img.freepik.com/premium-vector/snowdrifts-isolated-on-png-background-snow-landscape-decoration-frozen-hills_437689-340.jpg?w=2000");
+    background-size: cover;
+    color: brown;
+    font-family: Arial;
+    margin: 0px;
+    text-align: center;
+}
+
+header {
+    background-color: antiquewhite;
+    color: rgb(90, 41, 2); 
+    padding: 15px; 
+    font-size: 14pt;
+    text-shadow: 10px 6px 3px gray;
+    text-align: left;
+}
+
+header:hover {
+    color: rgb(246, 126, 28);
+    text-decoration: underline;
+    background: rgb(127, 121, 74);
+    font-size: 20px;
+    transition: 300ms;
+    opacity: 75%;
+}
+
+header:active {
+    color: rgb(11, 10, 10);
+    background-color: rgb(127, 121, 74);
+}
+
+main {
+    margin: 10px 20px;
+}
+
+footer {
+    background-color: antiquewhite;
+    color: rgb(90, 41, 2); 
+    font-size: 14pt;
+    font-style: italic; 
+    text-align: right;
+    text-shadow: 10px 6px 3px gray;
+    position: fixed;
+    width: 100%;
+    bottom: 0%;
+    padding: 10px 0px 10px 0px;
+    z-index: 99999999999;
+}
+
+footer:hover {
+    color: rgb(246, 126, 28);
+    text-decoration: underline;
+    background: rgb(127, 121, 74);
+    font-size: 20px;
+    transition: 300ms;
+    opacity: 75%;
+}
+
+footer:active {
+    color: rgb(11, 10, 10);
+    background-color: rgb(127, 121, 74);
+}
+
+a {
+    color: rgb(68, 47, 7);
+    font-style: italic; 
+    text-decoration: none;
+    text-shadow: 10px 6px 2px gray;
+    transition: 600ms 800ms;
+    display: -webkit-box;
+    text-align: -webkit-center;
+}
+
+a:visited {
+    color: blue;
+}
+
+a:hover {
+    color: rgb(1, 0, 0);
+    text-decoration: underline;
+    background-color: white;
+    font-weight: bold;
+    transition: 300ms;
+}
+
+a:active {
+    color: pink;
+    background-color: blanchedalmond;
+}
+
+.error {
+    position: absolute;
+    color: red;
+    right: 470px;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.card_w {
+    background-image: url("https://burdastyle.ru/images/cache/2022/11/18/resize_564_659_true_q90_5805941_768a895b8c7e0fe34655e2e2e.jpeg");
+    width: auto;
+    position: absolute;
+    right: 11%;
+    margin: 35px;
+    padding: 32px;
+    font-family: Kannada MN;
+    font-size: 23px;
+}

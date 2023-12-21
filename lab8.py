@@ -16,7 +16,7 @@ courses = [
 
 @lab8.route('/lab8/api/courses/', methods=["GET"])
 def get_courses():
-    return courses
+    return jsonify(courses)
 
 
 @lab8.route('/lab8/api/courses/<int:course_num>', methods=["GET"])
@@ -24,7 +24,7 @@ def get_course(course_num):
     if course_num > (len(courses) - 1) or course_num < 0:
         abort(404)
     else:
-        return jsonify[courses]
+        return courses[course_num]
     
 
 @lab8.route('/lab8/api/courses/<int:course_num>', methods=['DELETE'])
